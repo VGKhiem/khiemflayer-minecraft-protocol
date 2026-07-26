@@ -17,7 +17,7 @@ const Wrap = require('minecraft-wrap').Wrap
 
 for (const supportedVersion of mc.supportedVersions) {
   let PORT = null
-  const mcData = require('minecraft-data')(supportedVersion)
+  const mcData = require('khiemflayer-minecraft-data')(supportedVersion)
   const version = mcData.version
   const MC_SERVER_JAR_DIR = process.env.MC_SERVER_JAR_DIR || os.tmpdir()
   const MC_SERVER_JAR = MC_SERVER_JAR_DIR + '/minecraft_server.' + version.minecraftVersion + '.jar'

@@ -11,9 +11,9 @@ module.exports = function (client, server, { beforePing = null, version, fallbac
     }
 
     if (version === false) {
-      let minecraftData = require('minecraft-data')(client.protocolVersion)
+      let minecraftData = require('khiemflayer-minecraft-data')(client.protocolVersion)
       if (!minecraftData && fallbackVersion !== undefined) {
-        minecraftData = require('minecraft-data')(fallbackVersion)
+        minecraftData = require('khiemflayer-minecraft-data')(fallbackVersion)
       }
       if (minecraftData) {
         responseVersion = {

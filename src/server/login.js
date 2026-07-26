@@ -44,7 +44,7 @@ module.exports = function (client, server, options) {
   let loginKickTimer = setTimeout(kickForNotLoggingIn, kickTimeout)
 
   function onLogin (packet) {
-    const mcData = require('minecraft-data')(client.version)
+    const mcData = require('khiemflayer-minecraft-data')(client.version)
     client.supportFeature = mcData.supportFeature
 
     client.username = packet.username

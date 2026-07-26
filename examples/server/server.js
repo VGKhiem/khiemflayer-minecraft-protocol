@@ -9,7 +9,7 @@ const options = {
 }
 
 const server = mc.createServer(options)
-const mcData = require('minecraft-data')(server.version)
+const mcData = require('khiemflayer-minecraft-data')(server.version)
 const loginPacket = mcData.loginPacket
 
 // Global chat index counter for 1.21.5+

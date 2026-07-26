@@ -8,7 +8,7 @@ const server = mc.createServer({
   port: 25565,
   version: '1.16'
 })
-const mcData = require('minecraft-data')(server.version)
+const mcData = require('khiemflayer-minecraft-data')(server.version)
 const loginPacket = mcData.loginPacket
 const chunk = new Chunk()
 

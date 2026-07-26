@@ -19,7 +19,7 @@ function isFormatted (message) {
 }
 
 module.exports = function (client, options) {
-  const mcData = require('minecraft-data')(client.version)
+  const mcData = require('khiemflayer-minecraft-data')(client.version)
   client._players = {}
   client._lastChatSignature = null
   client._lastRejectedMessage = null

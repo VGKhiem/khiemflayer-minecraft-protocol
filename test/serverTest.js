@@ -26,7 +26,7 @@ const w = nbt.comp({
 
 for (const supportedVersion of mc.supportedVersions) {
   let PORT
-  const mcData = require('minecraft-data')(supportedVersion)
+  const mcData = require('khiemflayer-minecraft-data')(supportedVersion)
   const version = mcData.version
 
   const loginPacket = (client, server) => {
@@ -104,7 +104,7 @@ for (const supportedVersion of mc.supportedVersions) {
   describe('mc-server ' + supportedVersion + 'v', function () {
     this.timeout(5000)
     this.beforeEach(async function () {
-      console.log('🔻 Starting test', this.currentTest.title)
+      console.log('đŸ”» Starting test', this.currentTest.title)
       PORT = await getPort()
       console.log(`Using port for tests: ${PORT}`)
     })

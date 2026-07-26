@@ -8,7 +8,7 @@ const minecraft = require('../datatypes/minecraft')
 const states = require('../states')
 const merge = require('lodash.merge')
 
-const minecraftData = require('minecraft-data')
+const minecraftData = require('khiemflayer-minecraft-data')
 const protocols = {}
 
 function createProtocol (state, direction, version, customPackets, compiled = true) {

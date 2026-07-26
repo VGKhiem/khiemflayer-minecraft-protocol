@@ -9,7 +9,7 @@ module.exports = function (client, server, { version, fallbackVersion }) {
     client.protocolVersion = packet.protocolVersion
 
     if (version === false) {
-      const mcData = require('minecraft-data')(client.protocolVersion)
+      const mcData = require('khiemflayer-minecraft-data')(client.protocolVersion)
       if (mcData) {
         client.version = client.protocolVersion
         client._supportFeature = mcData.supportFeature
@@ -17,7 +17,7 @@ module.exports = function (client, server, { version, fallbackVersion }) {
       } else {
         let fallback
         if (fallbackVersion !== undefined) {
-          fallback = require('minecraft-data')(fallbackVersion)
+          fallback = require('khiemflayer-minecraft-data')(fallbackVersion)
         }
         if (fallback) {
           client.version = fallback.version.version

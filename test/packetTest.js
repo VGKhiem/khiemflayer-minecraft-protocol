@@ -466,7 +466,7 @@ function getValue (_type, packet) {
 for (const supportedVersion of mc.supportedVersions) {
   let PORT
 
-  const mcData = require('minecraft-data')(supportedVersion)
+  const mcData = require('khiemflayer-minecraft-data')(supportedVersion)
   const version = mcData.version
   const packets = mcData.protocol
 

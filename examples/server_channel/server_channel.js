@@ -5,7 +5,7 @@ const server = mc.createServer({
   encryption: false, // optional
   version: '1.18.2'
 })
-const mcData = require('minecraft-data')(server.version)
+const mcData = require('khiemflayer-minecraft-data')(server.version)
 const loginPacket = mcData.loginPacket
 
 server.on('playerJoin', function (client) {

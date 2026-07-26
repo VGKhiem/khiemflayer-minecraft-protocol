@@ -13,7 +13,7 @@ module.exports = function (client, options) {
     }
 
     function next () {
-      const mcData = require('minecraft-data')(client.version)
+      const mcData = require('khiemflayer-minecraft-data')(client.version)
       let taggedHost = options.host
       if (client.tagHost) taggedHost += client.tagHost
       if (options.fakeHost) taggedHost = options.fakeHost

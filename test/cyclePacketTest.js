@@ -9,7 +9,7 @@ const makeClientDeserializer = version => createDeserializer({ state: states.PLA
 
 for (const supportedVersion of supportedVersions) {
   let serializer, deserializer, data
-  const mcData = require('minecraft-data')(supportedVersion)
+  const mcData = require('khiemflayer-minecraft-data')(supportedVersion)
   const version = mcData.version
 
   function convertBufferToObject (buffer) {

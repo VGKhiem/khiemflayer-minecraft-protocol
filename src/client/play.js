@@ -13,7 +13,7 @@ module.exports = function (client, options) {
 
   client.once('login', (packet) => {
     if (packet.enforcesSecureChat) client.serverFeatures.enforcesSecureChat = packet.enforcesSecureChat
-    const mcData = require('minecraft-data')(client.version)
+    const mcData = require('khiemflayer-minecraft-data')(client.version)
     if (mcData.supportFeature('useChatSessions') && client.profileKeys && client.cipher && client.session.selectedProfile.id === client.uuid.replace(/-/g, '')) {
       client._session = {
         index: 0,
@@ -32,7 +32,7 @@ module.exports = function (client, options) {
   client.once('success', onLogin)
 
   function onLogin (packet) {
-    const mcData = require('minecraft-data')(client.version)
+    const mcData = require('khiemflayer-minecraft-data')(client.version)
     client.uuid = packet.uuid
     client.username = packet.username
 

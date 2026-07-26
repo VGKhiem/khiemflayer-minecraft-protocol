@@ -6,7 +6,7 @@ if (process.argv.length < 4 || process.argv.length > 6) {
 }
 
 function getBrandChannelName () {
-  const mcData = require('minecraft-data')(client.version)
+  const mcData = require('khiemflayer-minecraft-data')(client.version)
   if (mcData.supportFeature('customChannelIdentifier')) {
     return 'minecraft:brand' // 1.13+
   }

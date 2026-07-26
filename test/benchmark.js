@@ -6,7 +6,7 @@ const mc = require('../')
 const states = mc.states
 
 for (const supportedVersion of mc.supportedVersions) {
-  const mcData = require('minecraft-data')(supportedVersion)
+  const mcData = require('khiemflayer-minecraft-data')(supportedVersion)
   const version = mcData.version
   const positionFlags = mcData.isNewerOrEqualTo('1.21.3') ? { flags: { onGround: true, hasHorizontalCollision: false } } : { onGround: true }
   const testDataWrite = [

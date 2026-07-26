@@ -4,7 +4,7 @@ const debug = require('debug')('minecraft-protocol')
 const nbt = require('prismarine-nbt')
 
 module.exports = function (client, options) {
-  const mcdata = require('minecraft-data')(options.version || require('../version').defaultVersion)
+  const mcdata = require('khiemflayer-minecraft-data')(options.version || require('../version').defaultVersion)
   const channels = []
   const proto = new ProtoDef(options.validateChannelProtocol ?? true)
   nbt.addTypesToInterpreter('big', proto)

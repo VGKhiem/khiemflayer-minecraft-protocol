@@ -3,7 +3,7 @@
 const ping = require('../ping')
 const debug = require('debug')('minecraft-protocol')
 const states = require('../states')
-const minecraftData = require('minecraft-data')
+const minecraftData = require('khiemflayer-minecraft-data')
 
 module.exports = function (client, options) {
   client.wait_connect = true // don't let src/client/setProtocol proceed on socket 'connect' until 'connect_allowed'

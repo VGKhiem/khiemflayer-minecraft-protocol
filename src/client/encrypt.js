@@ -43,7 +43,7 @@ module.exports = function (client, options) {
       }
 
       function sendEncryptionKeyResponse () {
-        const mcData = require('minecraft-data')(client.version)
+        const mcData = require('khiemflayer-minecraft-data')(client.version)
 
         const pubKey = mcPubKeyToPem(packet.publicKey)
         const encryptedSharedSecretBuffer = crypto.publicEncrypt({ key: pubKey, padding: crypto.constants.RSA_PKCS1_PADDING }, sharedSecret)
