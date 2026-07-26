@@ -1,6 +1,6 @@
 {
   "name": "khiemflayer-minecraft-protocol",
-  "version": "1.66.4",
+  "version": "1.66.5",
   "description": "Parse and serialize minecraft packets, plus authentication and encryption.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -60,7 +60,7 @@
     "prismarine-chat": "^1.10.0",
     "prismarine-nbt": "^2.5.0",
     "prismarine-realms": "^1.2.0",
-    "protodef": "github:extremeheat/node-protodef#dlog",
+    "protodef": "\^1.19.0",
     "readable-stream": "^4.1.0",
     "uuid-1345": "^1.0.1",
     "yggdrasil": "^1.4.0"
