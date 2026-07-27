@@ -1,6 +1,6 @@
 const mc = require('minecraft-protocol')
-const Chunk = require('prismarine-chunk')('1.16.3')
-const Vec3 = require('vec3')
+const Chunk = require('khiemflayer-minecraft-chunk')('1.16.3')
+const Vec3 = require('khiemflayer-minecraft-vec3')
 const server = mc.createServer({
   'online-mode': true,
   encryption: true,
@@ -61,3 +61,4 @@ server.on('playerJoin', function (client) {
     flags: 0x00
   })
 })
+

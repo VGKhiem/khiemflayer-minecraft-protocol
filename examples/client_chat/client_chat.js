@@ -38,7 +38,7 @@ client.on('error', function (err) {
 })
 
 client.on('connect', () => {
-  const ChatMessage = require('prismarine-chat')(client.version)
+  const ChatMessage = require('khiemflayer-minecraft-chat')(client.version)
 
   console.log('Connected to server')
   rl.prompt()
@@ -84,3 +84,4 @@ rl.on('line', function (line) {
     client.chat(line)
   }
 })
+
