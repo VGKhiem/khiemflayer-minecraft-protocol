@@ -32,6 +32,7 @@ function createProtocol (state, direction, version, customPackets, compiled = tr
     compiler.addProtocol(mergedProtocol, [state, direction])
     nbt.addTypesToCompiler('big', compiler)
     const proto = compiler.compileProtoDefSync()
+    proto.setVariable('noArraySizeCheck', true)
     protocols[key] = proto
     return proto
   }
