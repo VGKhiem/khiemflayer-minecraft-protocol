@@ -4,7 +4,7 @@ const net = require('net')
 const EventEmitter = require('events').EventEmitter
 const Client = require('./client')
 const states = require('./states')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 const { createSerializer } = require('./transforms/serializer')
 
 class Server extends EventEmitter {

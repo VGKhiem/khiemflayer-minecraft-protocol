@@ -128,7 +128,7 @@ For a more up to date example, see examples/server/server.js.
 
 ```js
 const mc = require('minecraft-protocol')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 const server = mc.createServer({
   'online-mode': true,   // optional
   encryption: true,      // optional

@@ -8,7 +8,7 @@ const { concat } = require('../transforms/binaryStream')
 const { mojangPublicKeyPem } = require('./constants')
 const debug = require('debug')('minecraft-protocol')
 const NodeRSA = require('node-rsa')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 
 /**
  * @param {import('../index').Client} client

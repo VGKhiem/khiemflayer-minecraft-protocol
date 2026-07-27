@@ -3,7 +3,7 @@
 const mc = require('../')
 const assert = require('power-assert')
 const { once } = require('events')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 const applyClientHelpers = require('./common/clientHelpers')
 
 const { getPort } = require('./common/util')

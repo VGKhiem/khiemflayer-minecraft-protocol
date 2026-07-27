@@ -1,7 +1,7 @@
 const ProtoDef = require('protodef').ProtoDef
 const minecraft = require('../datatypes/minecraft')
 const debug = require('debug')('minecraft-protocol')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 
 module.exports = function (client, options) {
   const mcdata = require('khiemflayer-minecraft-data')(options.version || require('../version').defaultVersion)

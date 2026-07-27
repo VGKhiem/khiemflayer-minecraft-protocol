@@ -1,5 +1,5 @@
 const mc = require('minecraft-protocol')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 
 const options = {
   motd: 'Vox Industries',

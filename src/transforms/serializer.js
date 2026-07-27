@@ -3,7 +3,7 @@
 const { ProtoDef, Serializer, FullPacketParser } = require('protodef')
 const { ProtoDefCompiler } = require('protodef').Compiler
 
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 const minecraft = require('../datatypes/minecraft')
 const states = require('../states')
 const merge = require('lodash.merge')

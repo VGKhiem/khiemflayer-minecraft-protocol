@@ -8,7 +8,7 @@ const options = {
 const server = mc.createServer(options)
 const mcData = require('khiemflayer-minecraft-data')(server.version)
 const loginPacket = mcData.loginPacket
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 
 // Global chat index counter for 1.21.5+
 let nextChatIndex = 1

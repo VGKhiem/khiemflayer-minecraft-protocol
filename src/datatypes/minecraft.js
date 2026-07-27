@@ -1,6 +1,6 @@
 'use strict'
 
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 const UUID = require('uuid-1345')
 const zlib = require('zlib')
 const [readVarInt, writeVarInt, sizeOfVarInt] = require('protodef').types.varint

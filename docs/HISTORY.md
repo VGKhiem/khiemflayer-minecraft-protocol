@@ -547,7 +547,7 @@
 
 ## 1.0.0
 
-* update prismarine-nbt
+* update khiemflayer-minecraft-nbt
 * fixed options.favicon in createServer
 * enable strict mode
 * update to minecraft-data 2.0.0
