@@ -49,8 +49,17 @@ function createSerializer ({ state = states.HANDSHAKING, isServer = false, versi
   return new Serializer(createProtocol(state, !isServer ? 'toServer' : 'toClient', version, customPackets, compiled), 'packet')
 }
 
+class PacketParser extends FullPacketParser {
+  _transform (chunk, enc, cb) {
+    super._transform(chunk, enc, (error) => {
+      if (error && !error.buffer) error.buffer = chunk
+      cb(error)
+    })
+  }
+}
+
 function createDeserializer ({ state = states.HANDSHAKING, isServer = false, version, customPackets, compiled = true, noErrorLogging = false } = {}) {
-  return new FullPacketParser(createProtocol(state, isServer ? 'toServer' : 'toClient', version, customPackets, compiled), 'packet', noErrorLogging)
+  return new PacketParser(createProtocol(state, isServer ? 'toServer' : 'toClient', version, customPackets, compiled), 'packet', noErrorLogging)
 }
 
 module.exports = {

@@ -3,6 +3,7 @@ const EventEmitter = require('events').EventEmitter
 const compression = require('./transforms/compression')
 const framing = require('./transforms/framing')
 const states = require('./states')
+const [readVarInt] = require('protodef').types.varint
 const debug = require('debug')('minecraft-protocol')
 const debugSkip = process.env.DEBUG_SKIP?.split(',') ?? []
 
@@ -34,6 +35,7 @@ class Client extends EventEmitter {
     this._supportFeature = mcData.supportFeature
     this.state = states.HANDSHAKING
     this._hasBundlePacket = mcData.supportFeature('hasBundlePacket')
+    this._protocolError = false
   }
 
   get state () {
@@ -68,6 +70,8 @@ class Client extends EventEmitter {
     })
 
     this.deserializer.on('error', (e) => {
+      if (this._protocolError) return
+      this._protocolError = true
       let parts = []
       if (e.field) {
         parts = e.field.split('.')
@@ -75,8 +79,17 @@ class Client extends EventEmitter {
       }
       const deserializerDirection = this.isServer ? 'toServer' : 'toClient'
       e.field = [this.protocolState, deserializerDirection].concat(parts).join('.')
-      e.message = e.buffer ? `Parse error for ${e.field} (${e.buffer?.length} bytes, ${e.buffer?.toString('hex').slice(0, 6)}...) : ${e.message}` : `Parse error for ${e.field}: ${e.message}`
-      if (!this.compressor) { this.splitter.pipe(this.deserializer) } else { this.decompressor.pipe(this.deserializer) }
+      let packetId = 'unknown'
+      if (e.buffer) {
+        try {
+          packetId = `0x${readVarInt(e.buffer, 0).value.toString(16)}`
+        } catch {}
+      }
+      const payload = e.buffer ? `${e.buffer.length} bytes, ${e.buffer.toString('hex').slice(0, 96)}...` : 'no payload'
+      e.protocolVersion = this.version
+      e.packetId = packetId
+      e.message = `Parse error for ${e.field} (protocol ${this.version}, packet ${packetId}, ${payload}): ${e.message}`
+      if (!this.ended) this.end('protocolError')
       this.emit('error', e)
     })
     this._mcBundle = []
