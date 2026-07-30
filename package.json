@@ -54,7 +54,7 @@
     "lodash.merge": "^4.3.0",
     "khiemflayer-minecraft-data": "^3.111.0",
     "minecraft-folder-path": "^1.2.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.3.2",
     "node-rsa": "^0.4.2",
     "prismarine-auth": "^3.1.1",
     "prismarine-chat": "^1.10.0",
