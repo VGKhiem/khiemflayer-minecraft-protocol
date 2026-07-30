@@ -37,7 +37,7 @@
     "espower-loader": "^1.0.0",
     "intelli-espower-loader": "^1.0.0",
     "minecraft-packets": "^1.1.5",
-    "minecraft-protocol": "file:.",
+    "khiemflayer-minecraft-protocol": "file:.",
     "minecraft-wrap": "^1.2.3",
     "mocha": "^11.0.1",
     "power-assert": "^1.0.0",

@@ -1,4 +1,4 @@
-const protocol = require('minecraft-protocol') // Lets define protocol
+const protocol = require('khiemflayer-minecraft-protocol') // Lets define protocol
 
 if (process.argv.length < 3 || process.argv.length > 3) { // Check for args for prevent crashing etc.
   console.log('Usage : node ping.js <host>:[<port>]')

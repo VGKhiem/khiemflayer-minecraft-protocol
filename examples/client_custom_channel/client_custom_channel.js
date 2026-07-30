@@ -1,4 +1,4 @@
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node client_channel.js <host> <port> [<name>] [<password>]')

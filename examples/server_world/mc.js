@@ -1,4 +1,4 @@
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 const Chunk = require('khiemflayer-minecraft-chunk')('1.16.3')
 const Vec3 = require('khiemflayer-minecraft-vec3')
 const server = mc.createServer({

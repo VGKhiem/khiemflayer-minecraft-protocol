@@ -1,4 +1,4 @@
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 const readline = require('readline')
 const rl = readline.createInterface({
   input: process.stdin,

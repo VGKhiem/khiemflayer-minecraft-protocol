@@ -1,6 +1,6 @@
 'use strict'
 
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node echo.js <host> <port> <email>')

@@ -1,4 +1,4 @@
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 const socks = require('socks').SocksClient
 const ProxyAgent = require('proxy-agent')
 

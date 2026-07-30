@@ -8,7 +8,7 @@
 // session and get rejected with "already playing on the server" (Bukkit/Paper's
 // duplicate-login check), since the server hasn't necessarily finished processing the
 // old connection's teardown yet.
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node client_transfer.js <host> <port> [<name>]')

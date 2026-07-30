@@ -67,7 +67,7 @@ node-minecraft-protocol is pluggable.
 
 ## Installation
 
-`npm install minecraft-protocol`
+`npm install khiemflayer-minecraft-protocol`
 
 ## Documentation
 
@@ -80,7 +80,7 @@ node-minecraft-protocol is pluggable.
 ### Echo client example
 
 ```js
-const mc = require('minecraft-protocol');
+const mc = require('khiemflayer-minecraft-protocol');
 const client = mc.createClient({
   host: "localhost",   // optional
   port: 25565,                 // set if you need a port that isn't 25565
@@ -113,7 +113,7 @@ Note: SRV records will only be looked up if the port is unspecified or set to 25
 Example to connect to a Realm that the authenticating account is owner of or has been invited to:
 
 ```js
-const mc = require('minecraft-protocol');
+const mc = require('khiemflayer-minecraft-protocol');
 const client = mc.createClient({
   realms: {
     pickRealm: (realms) => realms[0] // Function which recieves an array of joined/owned Realms and must return a single Realm. Can be async
@@ -127,7 +127,7 @@ const client = mc.createClient({
 For a more up to date example, see examples/server/server.js.
 
 ```js
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 const nbt = require('khiemflayer-minecraft-nbt')
 const server = mc.createServer({
   'online-mode': true,   // optional

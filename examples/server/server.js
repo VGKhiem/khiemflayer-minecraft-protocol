@@ -1,4 +1,4 @@
-const mc = require('minecraft-protocol')
+const mc = require('khiemflayer-minecraft-protocol')
 const nbt = require('khiemflayer-minecraft-nbt')
 
 const options = {

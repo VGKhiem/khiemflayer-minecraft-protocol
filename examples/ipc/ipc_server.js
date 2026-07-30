@@ -5,7 +5,7 @@
  * See the node.js documentation about IPC connections here: https://nodejs.org/api/net.html#identifying-paths-for-ipc-connections
  */
 
-const nmp = require('minecraft-protocol')
+const nmp = require('khiemflayer-minecraft-protocol')
 const net = require('net')
 
 const ipcName = 'minecraft-ipc'
